@@ -1,28 +1,17 @@
-# Foobar
+# Segun Quién?
 
-Foobar is a Python library for dealing with word pluralization.
+Segun Quien is a Flask application that aims to hanlde quotes from various authors, books and topics, particularily focused on theological subjects.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+Currently, SegúnQuien is not available at the package manager [pip](https://pip.pypa.io/en/stable/) to install. Although, you're welcome to branch and test by yourself.
 
 ## Usage
 
+As any other flask app ;)...
+
 ```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+flask run
 ```
 
 ## Contributing
