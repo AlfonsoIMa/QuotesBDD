@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit Author{% endblock %}
+{% block content %}
+ <form action = "http://localhost:5000/login" method = "post">
+     <h2>Author submission form:</h2>
+     <p>
+        <b>IMPORTANT:</b>
+        You're about to add an author to the list. While I'm working on
+        having an intelligent app that can detect possible duplicates, I'd
+        ask you to be as cautious as possible when submitting since duplicates
+        can affect the behaviour of the app.
+     </p>
+     <!-- TODO: Intelligent cache for authors
+                Wikipedia look on the author (?) 
+     -->
+     <label for = "full_name">Full Name (Last, First):</label>
+     <input type = "text" id = "full_name" name = "full_name" placeholder = "Izaguirre, Poncho">
+     <label for = "short_name">Short Name (Last, F.):</label>
+     <input type = "text" id = "short_name" name = "short_name" placeholder = "Izaguirre, P.">
+ </form>
+{% endblock %}

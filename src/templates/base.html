@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Según Quién | {% block title %}{% endblock %}</title>
+    <meta name="description" content="A tool to organize, query, edit, enjoy and share your favorite quotes from every book on earth.">
+    <meta name="keywords" content="quote, books, query, database, flask, quoting, citation, apa, read, readings, nisea">
+    <meta name="author" content="AlfonsoIMa">
+</head>
+<body>
+    {% block header %}{% endblock %}
+    <nav>
+        <a href="index.html"><p>Home</p></a>
+        <a href="submit_quote.html"><p>Submit Quote</p></a>
+        <a href="quote_of_the_day.html"><p>Quote of the day</p></a>
+        <a href=""><p></p></a>
+        <a href=""><p></p></a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
