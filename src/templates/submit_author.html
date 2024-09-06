@@ -19,4 +19,9 @@
      <label for = "short_name">Short Name (Last, F.):</label>
      <input type = "text" id = "short_name" name = "short_name" placeholder = "Izaguirre, P.">
  </form>
+
+ {% if notification %}
+ <p class="notify">{{ authLong }} {{ notification }}</p>
+ {% endif %}
+
 {% endblock %}
