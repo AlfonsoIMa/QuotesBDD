@@ -155,9 +155,7 @@ dmypy.json
 cython_debug/
 
 # vim temp files
-*.swp
-src/*.swp
-tests/*.swp
+.swp
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
