@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit Publisher{% endblock %}
+{% block content %}
+ <form action = "/add/publisher" id = "submit_publisher" method = "post">
+     <h2>Publisher submission form:</h2>
+     <p>
+        <b>IMPORTANT:</b>
+        You're about to add an publisher to the list. While I'm working on
+        having an intelligent app that can detect possible duplicates, I'd
+        ask you to be as cautious as possible when submitting since duplicates
+        can affect the behaviour of the app.
+     </p>
+     <!-- TODO: Intelligent cache for publisher
+                Wikipedia look on the publisher 
+     -->
+     <label for = "name">Publisher Name:</label>
+     <input type = "text" id = "name" name = "name" placeholder = "RBA">
+     <button type = "submit" value = "Add Publisher">Add Publisher</button>
+ </form>
+
+ {% if notification %}
+ <p class="notify">{{ pubName }} {{ notification }}</p>
+ {% endif %}
+
+{% endblock %}
