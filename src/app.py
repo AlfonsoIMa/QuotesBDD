@@ -86,3 +86,26 @@ def add_publisher():
             pass
     else:
         return render_template('submit_publisher.html')
+
+@app.route("/add/quote", methods = ['POST', 'GET'])
+def add_quote():
+    if(request.method == 'POST'):
+        notification = None
+        # TODO - logging.debug(pubName)        
+
+        # TODO - Insert quote AND REDIRECT
+        # TODO - Return them into the page -> Wikipedia entry about them?
+        # Insert only if both fields have been fulfilled, otherwise ask for them
+        if(pubName):
+            try:
+                query_db('INSERT INTO publisher(name) VALUES (?);', (pubName,))
+                notification = 'was sucessfully included!'
+                return render_template('submit_publisher.html', notification = notification, pubName = pubName)
+            except Exception as e:
+                # TODO Beautify
+                return f'<p>{e}</p>'
+        else:
+            # TODO
+            pass
+    else:
+        return render_template('submit_quote.html')
